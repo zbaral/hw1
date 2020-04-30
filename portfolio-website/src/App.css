@@ -1,0 +1,48 @@
+.body {
+  background-color: peachpuff;/*#c9af98;*/
+}
+.nav-bar {
+  display: flex;
+  background-color: #3a4660;
+}
+.tab {
+  color: #ed8a63;
+}
+h2 {
+  padding: 10px;
+}
+div {
+  align-items: center;
+}
+.home-page {
+  display: flex;
+}
+.travel-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,250px));
+  grid-gap: 1rem;
+}
+.image {
+  max-height: 200px;
+  max-width: 250px;
+  padding: 5px;
+}
+.eiffel {
+  grid-row: span 2;
+}
+.text {
+  padding: 5px;
+}
+.stress-page {
+  display: flex;
+}
+.projects {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.projects > div {
+  padding: 10px;
+  flex-grow: 1;
+}
