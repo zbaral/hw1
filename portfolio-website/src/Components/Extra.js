@@ -4,14 +4,14 @@ import YouTube from 'react-youtube';
 export class Extra extends Component {
     render() {
         const opts ={
-            height: "185",
-            width: "320",
+            height: "370",
+            width: "640",
             playerVars: {
                 autoplay: 1,
             },
         };
         return (
-            <div>
+            <div className="proj-page">
                 <h2>Projects</h2>
                 <div>
                     During my time as a student at UCSB, I have worked on a couple different projects.

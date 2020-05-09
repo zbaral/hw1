@@ -32,10 +32,14 @@ export class App extends Component {
       {
         id: 4,
         title: 'Extra'
+      },
+      {
+        id: 5,
+        title: 'Guest Book'
       }
     ]
     return (
-      <div className="body">
+      <div className="app">
         <div className="nav-bar">
           <TabList tabs={tabs} 
           changeTab={this.changeTab}
