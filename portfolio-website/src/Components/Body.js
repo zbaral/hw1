@@ -4,6 +4,7 @@
  import StressRelief from './StressRelief'
  import Extra from './Extra'
  import GuestBook from './GuestBook'
+ import Movies from './Movies'
  import SimpleReactLightbox from "simple-react-lightbox";
  
  export class Body extends Component {
@@ -19,7 +20,9 @@
              return <StressRelief/>
          }else if(activeTab == 4){
              return <Extra/>
-         }else return <GuestBook/>
+         }else if(activeTab == 5){
+             return <GuestBook/>
+         }else return <Movies/>
      }
      render() {
          return (this.displayContent());
