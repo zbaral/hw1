@@ -23,6 +23,7 @@ div {
 .travel-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px,250px));
+  justify-content: space-evenly;
   grid-gap: 1rem;
 }
 .image {
@@ -117,5 +118,17 @@ input{
   border-top-right-radius: 0px;
 }
 .message{
+  padding: 10px;
+}
+
+/*Movies page styling*/
+
+.movies{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,305px));
+  justify-content: space-evenly;
+}
+.movie{
+  align-items: baseline;
   padding: 10px;
 }

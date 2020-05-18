@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import TabList from './Components/TabList'
 import Body from './Components/Body'
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 export class App extends Component {
   constructor(){
@@ -44,14 +45,16 @@ export class App extends Component {
     ]
     return (
       <div className="app">
-        <div className="nav-bar">
-          <TabList tabs={tabs} 
-          changeTab={this.changeTab}
-          activeTab={this.state.activeTab}/>
-        </div>
-        <div className="main-body">
-          <Body activeTab={this.state.activeTab}/>
-        </div>
+        <SimpleReactLightbox>
+          <div className="nav-bar">
+            <TabList tabs={tabs} 
+            changeTab={this.changeTab}
+            activeTab={this.state.activeTab}/>
+          </div>
+          <div className="main-body">
+            <Body activeTab={this.state.activeTab}/>
+          </div>
+        </SimpleReactLightbox>
       </div> 
     )
   }
