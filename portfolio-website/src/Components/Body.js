@@ -5,6 +5,8 @@
  import Extra from './Extra'
  import GuestBook from './GuestBook'
  import Movies from './Movies'
+ import AddMovie from './AddMovie'
+ import CreateList from './CreateList'
  import SimpleReactLightbox from "simple-react-lightbox";
  
  export class Body extends Component {
@@ -22,7 +24,11 @@
              return <Extra/>
          }else if(activeTab == 5){
              return <GuestBook/>
-         }else return <Movies/>
+         }else if(activeTab == 6){
+             return <Movies/>
+         }else if(activeTab == 7){
+             return <AddMovie/>
+         }else return <CreateList/>
      }
      render() {
          return (this.displayContent());

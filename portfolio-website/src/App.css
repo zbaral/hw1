@@ -132,3 +132,8 @@ input{
   align-items: baseline;
   padding: 10px;
 }
+
+/* drop down menu */
+.dropdown > div{
+  background-color: white;
+}
