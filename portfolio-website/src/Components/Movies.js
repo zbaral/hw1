@@ -19,8 +19,11 @@ export class Movies extends Component {
         this.state = {
             isLoading: true,
             movies: [],
-            lists: []
+            lists: [],
+            show: false
         }
+        this.handleShow = this.handleShow.bind(this);
+		this.handleClose = this.handleClose.bind(this);
     }
 
     componentDidMount() {
@@ -59,6 +62,13 @@ export class Movies extends Component {
         })
     }
 
+    handleClose() {
+		this.setState({ show: false });
+	}
+
+	handleShow() {
+		this.setState({ show: true });
+	}
     // handleList(name){
     //     let newState = []
     //     for(let movie in name){
@@ -93,16 +103,30 @@ export class Movies extends Component {
                         })}
                     </Dropdown.Menu>
                 </Dropdown>
-                
-                <SRLWrapper>
                     <div className = "movies">
                         {!isLoading ? (
                             movies.map(movie => {
                                 return (
                                     <div className="movie" key={movie.movieID}>
-                                        <a href={movie.poster} data-attribute="SRL">
-                                            <img src={movie.poster} alt={movie.title + "\n..... Directed by: " + movie.director + "\n..... IMDB rating: " + movie.rating} />
-                                        </a>
+                                        <button variant="primary" onClick={this.handleShow}>
+                                            <img src={movie.poster}/>
+                                        </button>
+
+                                        <Modal show={this.state.show} onHide={this.handleClose} className="modal">
+                                            <Modal.Header closeButton className="modal-header">
+                                                <Modal.Title>{movie.title}</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body><img src={movie.poster}/></Modal.Body>
+                                            <Modal.Body>Director: {movie.director}</Modal.Body>
+                                            <Modal.Footer>
+                                                <button variant="secondary" onClick={this.handleClose}>
+                                                        Close
+                                                </button>
+                                                <button variant="primary" onClick={this.handleClose}>
+                                                        Save Changes
+                                                </button>
+                                            </Modal.Footer>
+                                        </Modal>
                                     </div>
                                 );
                             })
@@ -111,7 +135,6 @@ export class Movies extends Component {
                             )
                         }
                     </div>
-                </SRLWrapper>
                 <div>
                     <ScrollToTop showUnder={160}>
                         <span>Back To Top</span>
