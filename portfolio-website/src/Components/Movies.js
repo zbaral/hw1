@@ -13,6 +13,8 @@ const firebase = require('firebase')
 // "tt0241527", "tt0120737", "tt0120855", "tt2267998", "tt1375666",
 // "tt0446029"]
 
+//attempt at creating lightbox
+
 export class Movies extends Component {
     constructor(){
         super();
