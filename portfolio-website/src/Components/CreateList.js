@@ -48,7 +48,7 @@ class CreateList extends Component {
     render() {
     return(
         <div className="add_list">
-            <h1>Add a New Movie</h1>
+            <h1>Add a New List</h1>
             <div className="add-list-body">
                 <div classname="addEntry">
                     <form onSubmit={this.handleSubmit}>

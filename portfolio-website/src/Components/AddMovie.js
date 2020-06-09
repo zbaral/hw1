@@ -54,7 +54,7 @@ class AddMovie extends Component {
                 movieInfo: response.data
             })
             const id = {
-                movieID: this.state.movieID,
+                movieID: this.state.movieInfo.imdbID,
                 movieInfo: this.state.movieInfo
             }
             idRef.push(id)

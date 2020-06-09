@@ -7,6 +7,7 @@
  import Movies from './Movies'
  import AddMovie from './AddMovie'
  import CreateList from './CreateList'
+ import Graph from './Graph'
  import SimpleReactLightbox from "simple-react-lightbox";
  
  export class Body extends Component {
@@ -28,7 +29,9 @@
              return <Movies/>
          }else if(activeTab == 7){
              return <AddMovie/>
-         }else return <CreateList/>
+         }else if(activeTab == 8){
+             return <CreateList/>
+         }else return <Graph/>
      }
      render() {
          return (this.displayContent());
